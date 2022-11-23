@@ -19,12 +19,23 @@
     </header>
     
     <main>
-        <form action="">
+        <form action="../logic.php" method="post" target="hiddenframe">
+            <label>
+                Select Subject:
+                <select name="subject" id="subject">
+                    <option value=""></option>
+                    <option value="test">test</option>
+                </select>
+            </label>--or--
+            <a href="#">+ New Subject</a>
             <textarea name="front" id="front" cols="30" rows="10"></textarea>
-            <button>&rarr;</button> <!-- this works as submit when pressing. us anchor?-->
+            <a>&rarr;</a> <!-- this works as submit when pressing. use anchor?-->
             <textarea name="rear" id="rear" cols="30" rows="10"></textarea>
             <button>Submit</button>
         </form>
+
+        <iframe name="hiddenframe" hidden></iframe> 
+        <!-- janky bit of code from StackOverflow. Used in form target so that we stay on same page after submitting-->
     </main>
 </body>
 </html>
