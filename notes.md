@@ -1,8 +1,23 @@
+# Only basic, essential features for now
 ## HTML
 
 ### Index (Add)
+- Only front facing cards
 ### Review
-### Edit
+- [ ] Set html values as (1,2,4) themselves to make easier for php
+## PHP
+- [ ] test query to send data thru site
+- [ ] set default value of $next while adding to current date
+    - [ ] need to concat specific array indexes to a string
+    - [ ] seems you can just use CURDATE() inside SQL string
+- [ ] 1, 2, 4 days based on response
+--- 
+# Low priority, do if time
+- [ ] create database if one named 'cardsql' doesn't exist. so that others can use 
+- back-facing & bi-directional cards
+- new deck feature (use just 1 deck for now)
+### Edit (PUT & DELETE http method)
+- reset button to reset dates of all cards
 - show subjects at 1st,
 - after select, show cards of that subject
 - after select, use <dialog> for editing cards
