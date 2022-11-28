@@ -1,6 +1,6 @@
 # Only basic, essential features for now
 ## HTML
-
+- [ ] Set basic CSS. add link tag to all  user-visible pages
 ### Index (Add)
 - Only front facing cards
 

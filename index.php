@@ -8,16 +8,6 @@
 </head>
 <body>
     
-    <header>
-        <h1>CardsQL</h1>
-        <ul>
-            <li><a href="#">Add</a></li>
-            <li><a href="#">Review</a></li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="http://localhost/phpmyadmin">SQL Database</a></li>
-        </ul>
-    </header>
-    
     <main>
         <form action="../logic.php" method="post">
         <!-- <form action="../logic.php" method="post" target="hiddenframe"> -->
