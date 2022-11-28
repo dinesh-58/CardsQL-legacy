@@ -9,10 +9,8 @@
     $response = 0;
     
 
-    echo "$front + $direction + $back + $last + $response + $next";
+    // echo "$front + $direction + $back + $last + $response + $next";
 
-    
-        // $sql = "INSERT INTO $table (`id`, `name`, `roll`, `address`, `gender`, `SEE`, `10+2`) VALUES ('$roll', '$name', '$roll', '$address', '$gender', '$see', '$plus2');";
         $sql = "INSERT INTO test ( `front`, `direction`, `back`, `last reviewed`, `response`, `next review`) VALUES ( '$front', '$direction', '$back', '$last', '$response', '$next')";
         if (mysqli_query($con, $sql))
             echo "\n SQL success";
