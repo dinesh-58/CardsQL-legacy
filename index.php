@@ -9,6 +9,7 @@
 </head>
 <body>
     
+    <?php readfile('header.html');?>
     <main>
         <form action="../logic.php" method="post">
         <!-- <form action="../logic.php" method="post" target="hiddenframe"> -->

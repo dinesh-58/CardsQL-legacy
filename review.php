@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <?php readfile('header.html');?>
     <!-- ? Use Javascript? idk -->
 </body>
 </html>
