@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <?php 
+        // forces browser to load new css file when it has been changed.
+        // for testing purposes. only works on dev computer. 
+        $filename = 'styles.css';
+        $filemodified = substr(md5(filemtime($filename)), 0,6);
+    ?>
+    <link rel="stylesheet" href="<?php echo $filename;?>?v=<?php echo $filemodified;?>">
     <title>CardsQL</title>
 </head>
 <body>

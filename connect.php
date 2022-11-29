@@ -5,6 +5,5 @@
     $db="cardsql";
     $con = mysqli_connect($server,$user,$password,$db);
 
-    if($con) echo ('Connection success');
-    else echo "Connection error";
+    if(!$con) echo "Could not connect to MySQL database";
 ?>
