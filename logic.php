@@ -1,5 +1,5 @@
 <?php
-    // $w_ prefix is used for variables that will be written to database
+    // $w_ prefix is used for new variables that will be written to database
     $table = $_POST['subject'];
     // $id = 2;
     $front = $_POST['front'];
@@ -13,8 +13,6 @@
     // echo "$front + $direction + $back + $last + $response + $next";
 
         $sql = "INSERT INTO test ( `front`, `direction`, `back`, `last reviewed`, `response`, `next review`) VALUES ( '$front', '$direction', '$back', '$last', '$response', '$next')";
-        if (mysqli_query($con, $sql))
-            echo "\n SQL success";
-        else echo "\n SQL fail";
-
+        $result=mysqli_query($con, $sql);
+        if (!$result) echo "<h3> Warning: SQL fail";
 ?>

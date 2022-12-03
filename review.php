@@ -20,9 +20,12 @@
         // connect with DB 
         require('connect.php');
         // TODO need to find way to get cards from all tables? 
-        $sql = "SELECT * FROM `test` LIMIT 1;";
+        $today = date('Y-m-d');
+        $sql = "SELECT * FROM `test` WHERE `next review` <= CURRENT_DATE LIMIT 1";
         // retrieve one record/ row 
-        // Optional: retrieve only if due date is <= today's date
+            // Optional: retrieve only if due date is <= today's date
+            // if (strcmp($today, $r_next) >= 0) SELECT
+            // this exact statement won't work but just writing down logic
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_assoc($result);
 
@@ -35,18 +38,49 @@
         $r_next = $row['next review'];
         // $r_response = $row['response'];
         $r_last= $row['last reviewed'];
+        $show = false;
     ?>
     <h4>Q: <?php echo $r_front;?></h4>
-    <h5 class="review-ans">A: <a href="#">Show answer</a></h5>
-    <!-- need to find way to show answer upon click, along with response options -->
-    <!-- Use JS? -->
+    <!-- <h5 class="ans-no">A: <a href="#">Show answer</a></h5> -->
+    <!-- <?php 
+    // if(isset($_POST['ans-show'])) $show=true;?>
+    <form action="" method="post" <?php 
+    // if($show) echo 'hidden';?>>
+        <button name="ans-show">Show answer</button>
+    </form> -->
+    <button onclick="showAns()" name="ans-show" class="ans-show"><h5>A: Show answer</h5></button>
+    <!-- <section class="ans-sect" <?php 
+    // if(!$show) echo 'hidden';?>> -->
+    <section class="ans-sect" hidden>
+        <h5>A: <?php echo $r_back;?></h5>
+        <h5>How well did you remember the answer?</h5>
+        <form action="" method="post">
+            <!-- hidden input for id of this card? thinking we might change some other card -->
+            <button name="response" value="1" class="response-option">Forgot</button>
+            <button name="response" value="2" class="response-option">Forgot some parts</button>
+            <button name="response" value="4" class="response-option">Remembered fully</button>
+        </form>
+    </section>
 
+    <?php 
+        // ! use function for this?
+        $response = $_POST['response'];
+        $add ='+'.$response.' day';
+        $r_last = $today; 
+        $r_next = date('Y-m-d', strtotime($r_next.$add));
 
-    <!-- wait for input -->
-    <!-- send response from one of 3 buttons to db  -->
-        <!-- Optional: logic to calculate next review date -->
+        $sql = "UPDATE `test` SET `last reviewed`='$r_last', `response`='$response', `next review`='$r_next' WHERE `id` = '$r_id'";
+        $result=mysqli_query($con, $sql);
+        if (!$result) echo "<h3> Warning: SQL fail";
+    ?>
 
-    <!-- retrieve next record -->
-        <!-- Optional: loop infinitely? or at least as long as there is record with review date <= today's date-->
+    
+    <script>
+        function showAns() {
+            document.querySelector('.ans-show').style.display = 'none';
+            document.querySelector('.ans-sect').style.display = 'block';
+        }
+    </script>
+
 </body>
 </html>

@@ -5,13 +5,13 @@
 - Only front facing cards
 
 ### Review
-- [ ] Set html values as (1,2,4) themselves to make easier for php
-- [ ] Use button tags for these so that response gets submitted upon pressing
+- [x] Set html values as (1,2,4) themselves to make easier for php
+- [x] Use button tags for these so that response gets submitted upon pressing
 
 ## PHP
 - [x] test query to send data thru site
 - [x] set default value of $next to current date
-- [ ] 1, 2, 4 days based on response
+- [x] 1, 2, 4 days based on response
 
 
 --- 
