@@ -28,7 +28,8 @@
             <!-- </label>--or-- -->
             <!-- <a href="#">+ New Subject</a> -->
             <textarea name="front" id="front" cols="30" rows="10" required></textarea>
-            <a href="#">&rarr;</a> <!-- this works as submit when pressing. use anchor?-->
+            <!-- <a href="#">&rarr;</a>  -->
+            &rarr;
             <textarea name="back" id="back" cols="30" rows="10" required></textarea>
             <button>Submit</button>
         </form>
