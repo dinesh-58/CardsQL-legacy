@@ -1,6 +1,6 @@
 <?php
     // $w_ prefix is used for new variables that will be written to database
-    $table = $_POST['subject'];
+    // $table = $_POST['subject'];
     // $id = 2;
     $front = $_POST['front'];
     $direction = '>'; 

@@ -19,14 +19,14 @@
     <main>
         <form action="logic.php" method="post">
         <!-- <form action="../logic.php" method="post" target="hiddenframe"> -->
-            <label>
-                Select Subject:
-                <select name="subject" id="subject">
-                    <option value=""></option>
-                    <option value="test" selected>test</option>
-                </select>
-            </label>--or--
-            <a href="#">+ New Subject</a>
+            <!-- <label> -->
+                <!-- Select Subject: -->
+                <!-- <select name="subject" id="subject"> -->
+                    <!-- <option value=""></option> -->
+                    <!-- <option value="test" selected>test</option> -->
+                <!-- </select> -->
+            <!-- </label>--or-- -->
+            <!-- <a href="#">+ New Subject</a> -->
             <textarea name="front" id="front" cols="30" rows="10" required></textarea>
             <a href="#">&rarr;</a> <!-- this works as submit when pressing. use anchor?-->
             <textarea name="back" id="back" cols="30" rows="10" required></textarea>

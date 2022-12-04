@@ -21,6 +21,10 @@
     <form action="" method="post">
         <button name="reset-all" value="reset-all">Reset review dates for all cards</button>
     </form>
+    <h5>Select </h5>
+    <?php 
+        // $sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='cardsql'";
+    ?>
 </body>
 </html>
 
