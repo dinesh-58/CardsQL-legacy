@@ -64,14 +64,16 @@
 
     <?php 
         // ! use function for this?
-        $response = $_POST['response'];
-        $add ='+'.$response.' day';
-        $r_last = $today; 
-        $r_next = date('Y-m-d', strtotime($today.$add));
-
-        $sql = "UPDATE `test` SET `last reviewed`='$r_last', `response`='$response', `next review`='$r_next' WHERE `id` = '$r_id'";
-        $result=mysqli_query($con, $sql);
-        if (!$result) echo "<h3> Warning: SQL fail";
+        if (isset($_POST['response'])) {
+            $response = $_POST['response'];
+            $add ='+'.$response.' day';
+            $r_last = $today; 
+            $r_next = date('Y-m-d', strtotime($today.$add));
+            
+            $sql = "UPDATE `test` SET `last reviewed`='$r_last', `response`='$response', `next review`='$r_next' WHERE `id` = '$r_id'";
+            $result=mysqli_query($con, $sql);
+            if (!$result) echo "<h3> Warning: SQL fail";
+        }
     ?>
 
     
