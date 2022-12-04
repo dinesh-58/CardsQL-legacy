@@ -22,14 +22,9 @@
         // TODO need to find way to get cards from all tables? 
         $today = date('Y-m-d');
         $sql = "SELECT * FROM `test` WHERE `next review` <= CURRENT_DATE LIMIT 1";
-        // retrieve one record/ row 
-            // Optional: retrieve only if due date is <= today's date
-            // if (strcmp($today, $r_next) >= 0) SELECT
-            // this exact statement won't work but just writing down logic
-        $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_assoc($result);
 
-        // $r_ prefix is used for variables that are read from database
+        // ! $r_ prefix is used for variables that are read from database
         $r_id = $row['id'];
         $r_front = $row['front'];
         // $r_direction = $row['direction']; 
@@ -41,16 +36,7 @@
         $show = false;
     ?>
     <h4>Q: <?php echo $r_front;?></h4>
-    <!-- <h5 class="ans-no">A: <a href="#">Show answer</a></h5> -->
-    <!-- <?php 
-    // if(isset($_POST['ans-show'])) $show=true;?>
-    <form action="" method="post" <?php 
-    // if($show) echo 'hidden';?>>
-        <button name="ans-show">Show answer</button>
-    </form> -->
     <button onclick="showAns()" name="ans-show" class="ans-show"><h5>A: Show answer</h5></button>
-    <!-- <section class="ans-sect" <?php 
-    // if(!$show) echo 'hidden';?>> -->
     <section class="ans-sect" hidden>
         <h5>A: <?php echo $r_back;?></h5>
         <h5>How well did you remember the answer?</h5>
