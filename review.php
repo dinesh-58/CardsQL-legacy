@@ -22,6 +22,7 @@
         // TODO need to find way to get cards from all tables? 
         $today = date('Y-m-d');
         $sql = "SELECT * FROM `test` WHERE `next review` <= CURRENT_DATE LIMIT 1";
+        $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_assoc($result);
 
         // ! $r_ prefix is used for variables that are read from database
