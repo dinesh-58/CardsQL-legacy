@@ -1,0 +1,60 @@
+html {
+    font-size: 62.5%;
+    /* sets root font size to 10px for easier calculation of rem */
+}
+body {
+    max-width: 70%;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: #40445a;
+    color: white;
+    font-size: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+* {
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+textarea, button {
+    border-radius: 5px;
+    background-color: #acacac;
+}
+button {
+    font-size: 2rem;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #2d343f;
+    color: white;
+}
+button:hover {
+    padding: 2px 8px;
+}
+.ans-sect h5 {
+    text-decoration: underline;
+    font-size: 2rem;
+}
+.ans-sect h6 {
+    font-size: 1.5rem;
+}
+.response-1 {
+    background-color: #BB4B45;
+}
+.response-2 {
+    background-color: #6f6f6f;
+}
+.response-3 {
+    background-color: #5D7D40;
+}

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
     <?php 
         // forces browser to load new css file when it has been changed.
         // for testing purposes. only works on dev computer. 
@@ -31,7 +34,7 @@
             <!-- <a href="#">&rarr;</a>  -->
             &rarr;
             <textarea name="back" id="back" cols="30" rows="10" required></textarea>
-            <button>Submit</button>
+            <br><button>Submit</button>
         </form>
 
         <iframe name="hiddenframe" hidden></iframe> 

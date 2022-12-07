@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
     <?php 
         // forces browser to load new css file when it has been changed.
         // for testing purposes. only works on dev computer. 
@@ -40,12 +42,12 @@
     <button onclick="showAns()" name="ans-show" class="ans-show"><h5>A: Show answer</h5></button>
     <section class="ans-sect" hidden>
         <h5>A: <?php echo $r_back;?></h5>
-        <h5>How well did you remember the answer?</h5>
+        <h6>How well did you remember the answer?</h6>
         <form action="" method="post">
             <!-- hidden input for id of this card? thinking we might change some other card -->
-            <button name="response" value="1" class="response-option">Forgot</button>
-            <button name="response" value="2" class="response-option">Forgot some parts</button>
-            <button name="response" value="4" class="response-option">Remembered fully</button>
+            <button name="response" value="1" class="response-1">Forgot</button>
+            <button name="response" value="2" class="response-2">Forgot some parts</button>
+            <button name="response" value="4" class="response-3">Remembered fully</button>
         </form>
     </section>
 
