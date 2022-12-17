@@ -15,8 +15,8 @@ response2 -> next-review += 2 days
 response3 -> next-review += 4 days
 ```
 
-I've written down more features I was planning on implementing in notes.md but I lost interest as the deadline got closer.
+I've written down more features I was planning on implementing in [notes.md](notes.md) but I lost interest as the deadline got closer.
 ## Screeenshots
-<img src="screenshots/screenshot-add.png" width="400"/>
-<img src="screenshots/screenshot-review-before.png" width="400"/>
-<img src="screenshots/screenshot-review-after.png" width="400"/>
+<img src="screenshots/screenshot-add.png" width="400" style="float: left;"/>
+<img src="screenshots/screenshot-review-before.png" width="400" style="float: left;"/>
+<img src="screenshots/screenshot-review-after.png" width="400" style="float: left;"/>
