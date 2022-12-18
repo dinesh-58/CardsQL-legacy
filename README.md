@@ -10,9 +10,9 @@ The response to a card is used to calculate its next review date.
 Proper flashcard apps will use sophisticated Spaced Repition algorithms like [SM-2](https://github.com/thyagoluciano/sm2) for the next review.
 This uses a more basic approach.
 ```
-response1 -> next-review += 1 day
-response2 -> next-review += 2 days
-response3 -> next-review += 4 days
+response1 -> next-review = today + 1 day
+response2 -> next-review = today + 2 days
+response3 -> next-review = today + 4 days
 ```
 
 I've written down more features I was planning on implementing in [notes.md](notes.md) but I lost interest as the deadline got closer.
