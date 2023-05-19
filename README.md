@@ -1,3 +1,4 @@
+# This repo is deprecated. Refer to [CardsQL](https://github.com/dinesh-58/CardsQL) for an improved & updated version.
 # Flashcards + SQL = CardsQL
 
 Project submission for my Web Technology class slapped together with barebones knowledge of php.  
